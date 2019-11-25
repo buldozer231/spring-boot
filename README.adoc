@@ -64,7 +64,7 @@ Having trouble with Spring Boot? We'd like to help!
 * Learn the Spring basics -- Spring Boot builds on many other Spring projects, check
   the https://spring.io[spring.io] web-site for a wealth of reference documentation. If
   you are just starting out with Spring, try one of the https://spring.io/guides[guides].
-* If you are upgrading, read the {github}/wiki[release notes] for upgrade instructions and
+* If you are upgrading,. read the {github}/wiki[release notes] for upgrade instructions and
   "new and noteworthy" features.
 * Ask a question - we monitor https://stackoverflow.com[stackoverflow.com] for questions
   tagged with https://stackoverflow.com/tags/spring-boot[`spring-boot`]. You can also chat
