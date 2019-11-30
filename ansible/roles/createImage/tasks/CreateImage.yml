@@ -8,7 +8,7 @@
     - deploy
 
 - name: Build image
-  shell: cd /docker-tmp/ && docker build -t buldozer232/spring-boot .
+  shell: cd /var/lib/jenkins/docker-tmp/ && docker build -t buldozer232/spring-boot .
   tags:
     - deploy
     - build_image
