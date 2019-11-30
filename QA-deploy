@@ -1,5 +1,5 @@
 node () {
     stage ("QA-deploy") {
-        sh "cd /var/lib/jenkins/workspace/graduation/spring-boot/ansible && ansible-playbook -l QA playbooks/run-image.yml --tags run_image"
+        sh "cd /var/lib/jenkins/workspace/graduation/spring-boot/ansible && ansible-playbook -l QA playbooks/deploy-image.yml --tags run_image"
      }
 }
