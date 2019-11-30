@@ -17,7 +17,7 @@ withCredentials([usernameColonPassword(credentialsId: 'e56b0ea0-d636-4532-9f7a-8
 
 node () {
     stage ("CHECKOUT") {
-        // sh "pwd"
+        //  sh "pwd"
         sh "rm -rf spring-boot/"
         sh "git clone ${REPO_URL}"
     }
