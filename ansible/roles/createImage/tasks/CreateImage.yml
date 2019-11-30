@@ -2,7 +2,7 @@
 - name: Set Dockerfile
   copy:
     src: "{{ role_path }}/files/Dockerfile"
-    dest: /docker-tmp/
+    dest: /var/lib/jenkins/docker-tmp/
     mode: 0644
   tags:
     - deploy
