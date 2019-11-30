@@ -45,11 +45,11 @@ node () {
         )
     }
 
-    // stage ("Build Docker image") {
-    //     sh "wget --user=admin --password=1Vfrcbv53 http://${NEXUS_URL}/repository/${NEXUS_REPO}/${NEXUS_GROUP}/${ARTIFACT_ID}/${BUILD_VERSION}/ -O /docker-tmp/spring-boot.jar"
-    //     sh "cd spring-boot/ansible && ansible-playbook playbook/build-image.yml --tags deploy"
-    //     sh "docker build -t buldozer232/spring-boot"
-    // }
+    stage ("Build Docker image") {
+        sh "wget --user=admin --password=1Vfrcbv53 http://${NEXUS_URL}/repository/${NEXUS_REPO}/${NEXUS_GROUP}/${ARTIFACT_ID}/${BUILD_VERSION}/ -O /docker-tmp/spring-boot.jar"
+        sh "cd spring-boot/ansible && ansible-playbook playbook/build-image.yml --tags deploy"
+        sh "docker build -t buldozer232/spring-boot"
+     }
     //34.70.39.207/repository/
     //maven-releases/Graduation/spring-boot/1.0.48/spring-boot-1.0.48.jar
 
