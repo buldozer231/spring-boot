@@ -1,0 +1,23 @@
+---
+  - import_tasks: jenkinsInstall.yml
+    tags:
+      - deploy
+      - install_jenkins
+  - import_tasks: jenkinsConfig.yml
+    tags:
+      - deploy
+      - install_jenkins
+
+  - import_tasks: jenkinsRemove.yml
+    tags:
+      - remove_jenkins
+      - erase
+  - import_tasks: jenkinsStart.yml
+    tags:
+      - start_jenkins
+  - import_tasks: jenkinsRestart.yml
+    tags:
+      - restart_jenkins
+  - import_tasks: jenkinsStop.yml
+    tags:
+      - stop_jenkins

@@ -1,0 +1,11 @@
+---
+
+  - name: "Checking tasks"
+    package_facts:
+      manager: "auto"
+    tags:
+       - always
+###############################################################################
+  - name: "Disable Selinux"
+    action: shell setenforce 0
+    when: ansible_selinux.status == "enabled"

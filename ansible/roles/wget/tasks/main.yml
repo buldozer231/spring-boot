@@ -1,0 +1,9 @@
+---
+  - import_tasks: wgetInstall.yml
+    tags:
+      - deploy
+      - install_wget
+  - import_tasks: wgetRemove.yml
+    tags:
+      - remove_wget
+      - erase

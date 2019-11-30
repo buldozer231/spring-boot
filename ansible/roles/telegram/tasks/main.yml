@@ -1,0 +1,4 @@
+---
+  - import_tasks: message.yml
+    tags:
+      - always

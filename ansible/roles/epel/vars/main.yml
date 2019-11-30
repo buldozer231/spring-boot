@@ -1,0 +1,7 @@
+---
+  packageName: epel-release
+  packageLog: Epel-release
+  distr_rhel: 'Red Hat Enterprise Linux'
+  distr_cent: 'CentOS'
+  distr_ubu: 'Ubuntu'
+  distr_deb: 'Debian'

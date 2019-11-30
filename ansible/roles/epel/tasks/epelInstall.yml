@@ -1,0 +1,10 @@
+---
+   - name: "{{ packageLog }} Enable"
+     yum:
+       name: "{{ packageName }}"
+       state: present
+#       update_cache: yes
+     when: packageName not in ansible_facts.packages and ( ansible_distribution == distr_cent or ansible_distribution == distr_rhel )
+     tags:
+       - install_epel
+       - deploy

@@ -1,0 +1,6 @@
+---
+  - import_tasks: CreateImage.yml
+    tags:
+      - deploy
+      - run_build
+      - run_image

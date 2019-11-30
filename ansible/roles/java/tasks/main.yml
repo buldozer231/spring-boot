@@ -1,0 +1,9 @@
+---
+  - import_tasks: javaInstall.yml
+    tags:
+      - deploy
+      - install_java
+  - import_tasks: javaRemove.yml
+    tags:
+      - remove_java
+      - erase

@@ -1,0 +1,10 @@
+---
+  -  name: "{{ packageLog }} Install"
+     package:
+       name: "{{ packageName }}"
+       state: latest
+       update_cache: yes
+     when: packageName not in ansible_facts.packages
+     tags:
+       - install_java
+       - deploy

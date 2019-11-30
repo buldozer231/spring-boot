@@ -1,0 +1,6 @@
+---
+  -  name: Start {{packageLog}}
+     service: name={{packageName}} state=started
+     tags:
+       - deploy
+       - start_nginx

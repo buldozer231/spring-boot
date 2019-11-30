@@ -1,0 +1,10 @@
+---
+  - name: Clear log
+    local_action: shell tail -20 /var/log/ansible.log | sed -e "s/.* |//g" | sed -e "s/*//g" | sed -e "s/   / /g" | sed -e "s/  / /g" > /var/log/ansible-bot.log
+    tags:
+      - always
+  - name: send a message to chat in playbook
+    telegram:
+      token: '1006011323:AAHwA0dXslsf4kV31Kz7nZUZnDiak2HF_pA'
+      chat_id: '-320002774'
+      msg: "done {{lookup('file', '/var/log/ansible-bot.log') }}"

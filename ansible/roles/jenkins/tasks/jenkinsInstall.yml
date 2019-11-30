@@ -1,0 +1,23 @@
+---
+  - name: Download jenkins.repo
+    get_url:
+      url: http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+      dest: /etc/yum.repos.d/jenkins.repo
+
+  - name: Import Jenkins Key
+    rpm_key:
+      state: present
+      key: https://jenkins-ci.org/redhat/jenkins-ci.org.key
+    tags:
+      - install_jenkins
+      - deploy
+
+  -  name: "{{ packageLog }} Install"
+     package:
+       name: "{{ packageName }}"
+       state: latest
+       update_cache: yes
+     when: packageName not in ansible_facts.packages
+     tags:
+       - install_jenkins
+       - deploy

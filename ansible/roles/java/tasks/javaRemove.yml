@@ -1,0 +1,10 @@
+---
+  -  name: "{{ packageLog }} Remove"
+     package:
+       name: "{{ packageName }}"
+       state: absent
+       update_cache: yes
+     when: packageName in ansible_facts.packages
+     tags:
+       - remove_java
+       - erase

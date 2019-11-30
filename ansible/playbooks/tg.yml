@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+- name: send a message to chat in playbook
+  telegram:
+    token: '1006011323:AAHwA0dXslsf4kV31Kz7nZUZnDiak2HF_pA'
+    chat_id: '-320002774'
+    msg: "the value of foo.txt is {{lookup('file', '/var/log/ansible_bot.log') }}"

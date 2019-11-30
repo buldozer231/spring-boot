@@ -1,0 +1,10 @@
+---
+#  - hosts: devtools
+  - import_tasks: epelInstall.yml
+    tags:
+      - deploy
+      - install_epel
+  - import_tasks: epelRemove.yml
+    tags:
+      - remove_epel
+      - erase

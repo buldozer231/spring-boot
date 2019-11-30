@@ -1,0 +1,5 @@
+---
+  -  name: Restart {{packageLog}}
+     service: name={{packageName}} state=restarted
+     tags:
+       - restart_nginx

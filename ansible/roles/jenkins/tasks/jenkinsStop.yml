@@ -1,0 +1,5 @@
+---
+  -  name: Stop Jenkins
+     service: name=jenkins state=stopped
+     tags:
+       - stop_jenkins

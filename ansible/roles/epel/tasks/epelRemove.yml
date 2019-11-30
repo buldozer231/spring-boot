@@ -1,0 +1,10 @@
+---
+   - name: "{{ packageLog }} Disable"
+     yum:
+       name: "{{ packageName }}"
+       state: absent
+
+     when: packageName in ansible_facts.packages and ( ansible_distribution == distr_cent or ansible_distribution == distr_rhel )
+     tags:
+       - remove_epel
+       - erase

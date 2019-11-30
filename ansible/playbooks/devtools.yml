@@ -1,0 +1,13 @@
+---
+- hosts: all
+  become: yes
+  roles:
+    - checker
+    - epel
+    - git
+    - wget
+    - java
+    - maven
+    - jenkins
+    - nginx
+    - telegram

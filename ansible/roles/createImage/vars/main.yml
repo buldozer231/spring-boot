@@ -1,0 +1,4 @@
+---
+  packageName: docker
+  packageLog: Docker
+  containerName: spring-boot

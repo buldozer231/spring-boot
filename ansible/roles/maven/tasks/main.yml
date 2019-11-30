@@ -1,0 +1,9 @@
+---
+  - import_tasks: Install.yml
+    tags:
+      - deploy
+      - install_maven
+  - import_tasks: Remove.yml
+    tags:
+      - remove_maven
+      - erase

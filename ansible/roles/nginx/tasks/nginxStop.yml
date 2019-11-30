@@ -1,0 +1,5 @@
+---
+  -  name: Stop {{packageLog}}
+     service: name={{packageName}} state=stopped
+     tags:
+       - stop_nginx

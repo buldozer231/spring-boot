@@ -1,0 +1,12 @@
+---
+  - import_tasks: Install.yml
+    tags:
+      - deploy
+      - install_docker
+  - import_tasks: Start.yml
+    tags:
+      - start_docker
+  - import_tasks: Remove.yml
+    tags:
+      - remove_docker
+      - erase
