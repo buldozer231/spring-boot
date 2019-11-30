@@ -11,7 +11,7 @@ def NEXUS_GROUP = "graduation"
 def ARTIFACT_NAME = "spring-boot"
 
 
-withCredentials([usernameColonPassword(credentialsId: 'e56b0ea0-d636-4532-9f7a-8e542fa16760', variable: 'nexus-credentials')]) {
+withCredentials([usernameColonPassword(credentialsId: 'e04b3716-4162-4219-ae42-b254726c9bc1', variable: 'nexus')]) {
     // some block
 }
 
