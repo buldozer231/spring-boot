@@ -23,7 +23,7 @@ node () {
     }
     stage ("BUILD") {
        withMaven(
-            maven: 'Maven') {
+            maven: 'maven') {
             sh "mvn clean install -e -f ${POM_PATH}"
         }
     }
