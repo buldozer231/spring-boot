@@ -47,7 +47,7 @@ node () {
 
     stage ("Build Docker image") {
 //          sh "sudo -i"
-        sh "wget --user=admin --password=1Vfrcbv53 http://${NEXUS_URL}/repository/${NEXUS_REPO}/${NEXUS_GROUP}/${ARTIFACT_ID}/${BUILD_VERSION}/ -O /var/lib/jenkins/docker-tmp/spring-boot.jar"
+        sh "wget --user=admin --password=1Vfrcbv53 http://${NEXUS_URL}/repository/${NEXUS_REPO}/${NEXUS_GROUP}/${ARTIFACT_ID}/${BUILD_VERSION}/ -O /var/lib/jenkins/docker-tmp/"
         sh "cd /var/lib/jenkins/workspace/graduation/spring-boot/ansible && ansible-playbook -l dev-tools playbooks/build-image.yml --tags deploy"
      }
     //   34.70.39.207/repository/
