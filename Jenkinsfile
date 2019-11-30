@@ -51,7 +51,7 @@ node () {
         sh "cd /var/lib/jenkins/workspace/graduation/spring-boot/ansible && ansible-playbook -l dev-tools playbooks/build-image.yml --tags deploy"
     //     sh "docker build -t buldozer232/spring-boot"
      }
-    // 34.70.39.207/repository/
+    //  34.70.39.207/repository/
     //maven-releases/Graduation/spring-boot/1.0.48/spring-boot-1.0.48.jar
 
     stage ("CI DEPLOY") {
