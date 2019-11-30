@@ -12,7 +12,7 @@ def ARTIFACT_NAME = "spring-boot"
 
 
 withCredentials([usernameColonPassword(credentialsId: 'e04b3716-4162-4219-ae42-b254726c9bc1', variable: 'nexus')]) {
-      // some block 
+       // some block 
 }
 
 node () {
