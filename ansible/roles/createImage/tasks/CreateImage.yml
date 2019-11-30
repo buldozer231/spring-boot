@@ -8,18 +8,18 @@
     - deploy
 
 - name: Build image
-  shell: cd /docker-tmp/ && docker build -t "{{ containerName }}" .
+  shell: cd /docker-tmp/ && docker build -t buldozer232/spring-boot .
   tags:
     - deploy
     - build_image
 
 - name: Push image
-  shell: docker push "{{ containerName }}"
+  shell: docker push buldozer232/spring-boot
   tags:
     - deploy
     - push_image
 
 - name: Run container
-  shell: sudo docker run -d -p 80:8080 "{{ containerName }}"
+  shell: sudo docker run -d -p 80:8080 buldozer232/spring-boot
   tags:
     - run_image
