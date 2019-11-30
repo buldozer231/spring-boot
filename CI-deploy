@@ -1,5 +1,5 @@
 node () {
     stage ("CI-deploy") {
-        sh "cd /var/lib/jenkins/workspace/graduation/spring-boot/ansible && ansible-playbook -l CI playbooks/deploy-image.yml --tags run_image"
+        sh "cd /var/lib/jenkins/workspace/graduation/spring-boot/ansible && ansible-playbook -l ci playbooks/deploy-image.yml --tags run_image"
      }
 }
