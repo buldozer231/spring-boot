@@ -46,7 +46,7 @@ node () {
     }
 
     stage ("Build Docker image") {
-        sh "sudo wget --user=admin --password=1Vfrcbv53 http://${NEXUS_URL}/repository/${NEXUS_REPO}/${NEXUS_GROUP}/${ARTIFACT_ID}/${BUILD_VERSION}/ -O /docker-tmp/spring-boot.jar"
+        sh "wget --user=admin --password=1Vfrcbv53 http://${NEXUS_URL}/repository/${NEXUS_REPO}/${NEXUS_GROUP}/${ARTIFACT_ID}/${BUILD_VERSION}/ -O /docker-tmp/spring-boot.jar"
         sh "cd spring-boot/ansible && ansible-playbook playbook/build-image.yml --tags deploy"
     //    sh "docker build -t buldozer232/spring-boot"
      }
