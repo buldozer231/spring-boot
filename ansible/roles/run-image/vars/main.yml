@@ -1,4 +1,5 @@
 ---
   packageName: docker
   packageLog: Docker
-  containerName: spring-boot
+  container: buldozer232/spring-boot
+  port: 80
