@@ -3,6 +3,11 @@
    shell: sudo docker pull {{ container }}
    tags:
      - run_image
+     
+ - name: Kill container
+   service: name=docker state=restarted
+   tags:
+     - run_image
 
  - name: Run container
    shell: sudo docker run -d -p {{ port }}:8080 {{ container }}
