@@ -1,5 +1,5 @@
 node () {
     stage ("QA-deploy") {
-        sh "cd /var/lib/jenkins/workspace/graduation/spring-boot/ansible && ansible-playbook -l qa playbooks/deploy-image.yml --tags run_image --extra-vars "port=80""
+        sh "cd /var/lib/jenkins/workspace/graduation/spring-boot/ansible && ansible-playbook -l qa playbooks/deploy-image.yml --extra-vars "port=80" --tags run_image"
      }
 }
